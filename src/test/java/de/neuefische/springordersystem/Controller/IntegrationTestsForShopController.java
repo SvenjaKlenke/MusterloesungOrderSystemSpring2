@@ -27,6 +27,7 @@ class IntegrationTestsForShopController {
     }
 
     @Test
+    @DirtiesContext
     void getAllOrders_thenReturnAllOrder() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/api/orders/1")
                 .contentType(MediaType.APPLICATION_JSON)
